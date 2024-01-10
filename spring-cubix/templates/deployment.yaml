@@ -34,9 +34,18 @@ spec:
           startupProbe:
             periodSeconds: 5
             failureThreshold: 5
-            exec:
-              command:
-                - ls
+            tcpSocket:
+              port: 8080
+          livenessProbe:
+            periodSeconds: 5
+            failureThreshold: 5
+            tcpSocket:
+              port: 8080
+          readinessProbe:
+            periodSeconds: 5
+            failureThreshold: 5
+            tcpSocket:
+              port: 8080
           env:
           - name: JAVA_OPTS
             value: {{ .Values.javaOpts | quote }}
