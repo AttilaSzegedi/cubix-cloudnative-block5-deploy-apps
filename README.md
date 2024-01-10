@@ -15,4 +15,4 @@ Replace password (with the value of Postgres password)
 ```shell
 helm upgrade db spring-cubix --install -f db.yaml -n cubix --set env[2].value=<ENTER-PASSWORD>
 ```
-# made own 2
+# made own 3
